@@ -10,7 +10,7 @@ import MiscStats from './components/MiscStats';
 function App() {
   
   return (
-    <div className="App">
+    <div className="App" style={{maxWidth:"1500px" , margin:"auto"}}>
       <Router>
         <Navbar/>
         <Routes>

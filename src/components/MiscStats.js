@@ -20,7 +20,6 @@ export default function MiscStats() {
 
     function getScattArr(data){
       const arr = []
-      console.log(data.length)
       for(let i = 0 ; i<data.length ; i++){
         arr.push([ data[i]._source.matches_played , data[i]._source.batting_average ])
       }
@@ -252,7 +251,6 @@ export default function MiscStats() {
                     },
                     series: series,
                   })
-                  console.log(data4)
                   const fourData = [] , sixData = [] , fourRunsData = [] , sixRunsData = [] , otherRunsData= [] , teamNames = []
                   for(let i = 0 ; i<data4.length ; i++){
                     teamNames.push(data4[i].key)
@@ -408,7 +406,7 @@ export default function MiscStats() {
     }
   
   return (
-    <Container style={{ display: 'flex', width:"100vw" , minWidth:"800px" , maxWidth:"100vw", padding:"0" , marginTop : "20px" ,height: '87vh' , justifyContent:"space-between"  }}>
+    <Container style={{ display: 'flex', width:"100vw" , minWidth:"800px" , maxWidth:"1500px", padding:"0" , marginTop : "20px" ,height: '87vh' , justifyContent:"space-between"  }}>
         <Box style={{ flex: '1' , overflow:"scroll" }}>
             {aggScore.chart && 
              <Grid container spacing={2}>

@@ -15,7 +15,6 @@ export default function TeamWiseStats() {
     const [totalWicketsRunFilter , setTotalWicketsRunFilter] = useState({});
     
     function barObject(title, valArr , minVal , maxVal){
-        console.log(valArr)
         return {
             chart: {
               type: 'bar',
@@ -56,7 +55,6 @@ export default function TeamWiseStats() {
     
     const fetchData = () => {  
           
-          console.log("searching ....")
         const requests = [
             axios.post(`https://localhost:9200/match_brief_index/_search`,
             {
@@ -242,7 +240,7 @@ export default function TeamWiseStats() {
   }
 
   return (
-    <Container style={{ display: 'flex', width:"100vw" , minWidth:"800px" , maxWidth:"100vw", padding:"0" , marginTop : "20px" ,height: '87vh' , justifyContent:"space-between"  }}>
+    <Container style={{ display: 'flex', width:"100vw" , minWidth:"800px" , maxWidth:"1500px", padding:"0" , marginTop : "20px" ,height: '87vh' , justifyContent:"space-between"  }}>
         <Box style={{ flex: '1' , overflow:"scroll" }}>
             {totalRuns.chart && 
              <Grid container spacing={2}>
