@@ -21,7 +21,7 @@ export default function Navbar() {
                </a>
             </Typography>
           
-            <DropdownWithLinks dropDownTitle="Statitics" links={dropDownLinks}/>
+            <DropdownWithLinks dropDownTitle="Statistics" links={dropDownLinks}/>
           
         </Toolbar>
       </AppBar>
